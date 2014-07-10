@@ -6,14 +6,14 @@ test_that("Source Gist Correctly", {
   expect_equal(capture.output(source_gist("f2e541586bb70697c2cc", chdir = TRUE), 
                               file=NULL), 
                "hello")
-  expect_equal({
-    source_gist("452874384bdc62ca9ae7", verbose = TRUE)
-    capture.output(hello(), file=NULL)
-  }, "hello")
-  expect_equal({
-    source_gist("f3fe88494ad49fe9445e", sha1="194673d8e95fedbc0e1e7f7820f98e681dab8754")
-    capture.output(hello(), file=NULL)
-  }, "hello")
-  expect_error(source_gist("f3fe88494ad49fe9445e", sha1="294673"))
+#   expect_equal({
+#     source_gist("452874384bdc62ca9ae7", verbose = TRUE)
+#     capture.output(hello(), file=NULL)
+#   }, "hello")
+#   expect_equal({
+#     source_gist("f3fe88494ad49fe9445e", sha1="194673d8e95fedbc0e1e7f7820f98e681dab8754")
+#     capture.output(hello(), file=NULL)
+#   }, "hello")
+#   expect_error(source_gist("f3fe88494ad49fe9445e", sha1="294673"))
 })
 
